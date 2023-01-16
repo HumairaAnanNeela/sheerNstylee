@@ -1,0 +1,86 @@
+.homespan{
+    color:  rgb(0, 0, 0);
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 700;
+}
+h2{
+    color: rgb(174, 96, 203);
+    
+    font-weight: 500
+}
+.n_btn{
+    color: #fff;
+    background-color: rgb(99, 46, 119);
+    font-size: 25px;
+    font-weight: 500;
+    border: none;
+    border-radius: 12px;
+    text-decoration: none;
+    margin: 2px 5px;
+}
+.n_btn:hover{
+    color: rgb(98, 2, 79);
+    background-color: #fff;
+    /* border: 1px solid rgb(107, 50, 137); */
+}
+body{
+    background-image: url('images/salon3.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.salon_t{
+    color: white;
+    border: 12px solid rgb(174, 96, 203);
+    padding: 30px;
+    margin: 21px 0px 45px 0px;
+    box-shadow: 5px 10px rgb(238, 215, 247);
+    border-radius: 25px;
+    display: inline-block;
+}
+.salon_t,th,td{
+    border: 1px solid rgb(174, 96, 203);
+    border-collapse: collapse;
+}
+#salon_btn{
+    color: white;
+    text-decoration: none;
+    padding: 10px 12px;
+    display: inline-block;
+}
+#salon_bt{
+    color: white;
+    text-decoration: none;
+    padding: 2px 8px;
+    
+    display: inline-block;
+}
+#salon_th{
+    margin: 2px 5px;
+}
+
+.h_clr{
+    color: white;
+}
+.home_th{
+    font-size: 27px;
+}
+.h_td{
+    font-size: 20px;
+    display: inline-block;
+    /* margin: 0 5px; */
+}
+#h_id{
+    font-size: 25px;
+}
+.h_btn{
+    color: #fff;
+    background-color: rgb(99, 46, 119);
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    /* border-radius: 12px; */
+    text-decoration: none;
+    /* margin: 2px 5px; */
+}

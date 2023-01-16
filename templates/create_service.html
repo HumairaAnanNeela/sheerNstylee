@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<link rel="stylesheet" href="{{url_for('static', filename='create.css')}}">
+
+<div class="row">
+    <div class="col-lg-6 createform">
+        <h3 class="usern" align="center">Service Form</h3>
+      <form class="form" method="post">
+          {{form.hidden_tag()}}
+          {{form.service_name.label(class="usern")}}
+          {{form.service_name(class="uname" ,placeholder="service_name",value=service_name)}}
+          {{form.about.label(class="usern")}}
+          {{form.about(class="uname" ,placeholder="about",value=about)}}
+          {{form.price.label(class="usern")}}
+          {{form.price(class="uname", placeholder="price",value=price)}}
+          {{form.submit(class="btn n_btn")}}
+      </form>
+      
+   </div>
+</div>
+
+
+{% endblock body %}

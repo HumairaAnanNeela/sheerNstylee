@@ -1,0 +1,43 @@
+/*body css*/
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	/* color: #616368; */
+}
+
+h1 {
+	font-size: 50px;
+	font-weight: 600;
+	color: #242f51;
+}
+.logo{
+    color:  rgb(98, 2, 79);
+    padding: 10px;
+}
+.banner{
+    padding: 50px;
+}
+
+.opt{
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 10px;
+}
+.opt:hover{
+    
+    color: rgb(221, 149, 248);
+}
+.banner_h1{
+    font-size: 50px;
+    font-weight: 500;
+    color: rgb(98, 2, 79);
+    text-align: center;
+}
+
+table, th, td {
+    border: 1px solid;
+  }

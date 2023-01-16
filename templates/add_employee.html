@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<link rel="stylesheet" href="{{url_for('static', filename='salon_signup.css')}}">
+<link rel="stylesheet" href="{{url_for('.static', filename='owner.css')}}">
+
+<div>
+<div class="row"
+    <div class="col-lg-6 ownform">
+        <h3 class="usern" align="center">Employee Form</h3>
+        <form class="form" method="post">
+        {{form.hidden_tag()}}
+        {{form.name.label(class="usern")}}
+        {{form.name(class="uname",placeholder="Name",value=name)}}
+
+        {{form.gender.label(class="usern")}}
+        {{form.gender(class="uname",placeholder="Gender",value=gender)}}
+        
+        {{form.roles.label(class="usern")}}
+        {{form.roles(class="uname",placeholder="Roles",value=roles)}}
+
+        {{form.email.label(class="usern")}}
+        {{form.email(class="uname",placeholder="Email Address of The Employee",value=email)}}
+        {{form.password1.label(class="usern")}}
+        {{form.password1(class="uname",placeholder="Password",value=password1)}}
+        {{form.password2.label(class="usern")}}
+        {{form.password2(class="uname",placeholder="Confirm Password",value=password2)}}
+        {{form.location.label(class="usern")}}
+        {{form.location(class="uname",placeholder="Location of The Employee",value=location)}}
+        {{form.phone_number.label(class="usern")}}
+        {{form.phone_number(class="uname",placeholder="Phone Number of The Employee",value=phone_number)}}<br>
+        {{form.submit(class=("btn n_btn"))}}
+        </form>
+    </div>
+</div>
+</div>
+{% endblock body %}

@@ -1,0 +1,53 @@
+.usern {
+    color: rgb(221, 149, 248);
+    font-size: 25px;
+    font-weight: 700;
+    /* background-color: aqua; */
+}
+
+
+.n_btn{
+    color: #fff;
+    background-color: rgb(99, 46, 119);
+    font-size: 25px;
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+}
+.n_btn:hover{
+    color: rgb(98, 2, 79);
+    background-color: #fff;
+    /* border: 1px solid rgb(107, 50, 137); */
+}
+.uname{
+    display: block;
+    width: 100%;
+    padding: 7px;
+    border: 2px solid rgb(98, 2, 79);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.loginform{
+    border: 3px solid rgb(98, 2, 79);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+.bannerh1{
+    color: rgb(221, 149, 248);
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+    
+
+}
+.banner{
+    padding: 70px 0;
+}
+body {
+    background-image: url('images/salon3.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    
+  }

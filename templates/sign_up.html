@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+<link rel="stylesheet" href="{{url_for('.static', filename='signup.css')}}">
+
+
+
+<div class="row">
+    <div class="col-lg-6 signupform">
+        <form action="/sign_up"  class="form" method="post">
+            {{form.hidden_tag()}}
+            {{form.name.label(class="usern")}}
+            {{form.name(class="uname",placeholder="Name")}}
+            {{form.email.label(class="usern")}}
+            {{form.email(class="uname",placeholder="Email")}}
+            {{form.password1.label(class="usern")}}
+            {{form.password1(class="uname",placeholder="password1")}}
+            {{form.password2.label(class="fusern")}}
+            {{form.password2(class="uname",placeholder="password2")}}
+            {{form.roles.label(class="usern")}}
+            {{form.roles(class="uname",placeholder="Role")}}
+            {{form.status.label(class="usern")}}
+            {{form.status(class="uname",placeholder="Status")}}<br>
+            {{form.submit(class=("btn n_btn"))}}
+            {{s}}
+                </form>
+    </div>
+</div>
+        
+{% endblock body %}

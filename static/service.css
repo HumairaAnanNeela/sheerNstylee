@@ -1,0 +1,34 @@
+.serviceform{
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.usern {
+    color: rgb(174, 96, 203);
+    font-size: 25px;
+    font-weight: 700;
+    /* background-color: aqua; */
+}
+
+
+.n_btn{
+    color: #fff;
+    background-color: rgb(99, 46, 119);
+    font-size: 25px;
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+}
+.n_btn:hover{
+    color: rgb(98, 2, 79);
+    background-color: #fff;
+    /* border: 1px solid rgb(107, 50, 137); */
+}
+.uname{
+    display: block;
+    width: 100%;
+    padding: 7px;
+    border: 2px solid rgb(98, 2, 79);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}

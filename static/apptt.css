@@ -1,0 +1,34 @@
+body{
+    background-image: url('images/salon5.jpg'); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.app{
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+}
+.appt{
+    color: rgb(152, 80, 155);
+    font-size: 22px;
+}
+.n_btn{
+    color: #fff;
+    background-color: rgb(99, 46, 119);
+    font-size: 30px;
+    font-weight: 500;
+    border: none;
+    border-radius: 12px;
+    text-decoration: none;
+    padding: 8px;
+    margin: 2px 5px;
+}
+.n_btn:hover{
+    color: rgb(98, 2, 79);
+    background-color: #fff;
+    /* border: 1px solid rgb(107, 50, 137); */
+}
+.apptt{
+    color: rgb(228, 179, 230);
+}

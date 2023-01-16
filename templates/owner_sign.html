@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<link rel="stylesheet" href="{{url_for('.static', filename='salon_signup.css')}}">
+{% if error %}
+    {{error}}
+{% endif %}
+<div>
+    
+<div class="row">
+    <div class="col-lg-6 ownform">
+        <h3 class="usern" align="center">Owner Form</h3>
+        <form class="form" method="post">
+        {{form.hidden_tag()}}
+        {{form.owner_name.label(class="usern")}}
+        {{form.owner_name(class="uname",placeholder="Owner Name",value=owner_name)}}
+        {{form.email.label(class="usern")}}
+        {{form.email(class="uname",placeholder="Email Address of The Shop",value=email)}}
+        {{form.password1.label(class="usern")}}
+        {{form.password1(class="uname",placeholder="Password",value=password1)}}
+        {{form.password2.label(class="usern")}}
+        {{form.password2(class="uname",placeholder="Re-password",value=password2)}} <br>
+        {{form.submit(class=("btn n_btn"))}}
+        </form>
+    </div>
+</div>
+</div>
+{% endblock body %}

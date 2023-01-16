@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<link rel="stylesheet" href="{{url_for('static', filename='login.css')}}">
+
+<div class="container">
+    
+        <div class="col-lg-12 banner">
+            <h1 class="bannerh1">Welcome! <br>To the very first salon site in<br>Bangladesh</h1>
+        </div>
+        
+    
+<div class="row">
+    <!-- <div class="col-lg-8">
+        <img src="{{url_for('static', filename='images/salon2.jpg')}}" alt="sheerNstyle">
+    </div> -->
+    <div class="col-lg-3 loginform">
+        {% if salon %}
+            <span class="usern" >Login as Salon</span>
+        {% elif employee %}
+        <span class="usern" >Login as Employee or Owner</span>
+        {% else %}
+        <span class="usern" >Login as Employee or Owner or Salon</span>
+        {% endif %}
+        
+        <form class="form" method="post" action="/login/">
+        {{form.hidden_tag()}}
+        {{form.email.label(class="usern")}}
+        {{form.email(class="uname", placeholder="Email")}}
+        {{form.password1.label(class="usern",)}}
+        {{form.password1(class="uname userp",placeholder="Password")}}
+        {{form.remember(class="form-check-input")}} <span class="usern">Remember Me</span> <br> 
+    
+            {% if salon %}
+            <input type="radio" name="type" id="salon" value="salon" checked style="display: none;">
+            <label class="usern" for="salon" style="display: none;">Salon</label><br>
+            {% elif employee %}
+            <input type="radio" name="type" id="owner" value="owner">
+            <label class="usern" for="owner">Owner</label><br>
+            <input type="radio" name="type" id="employee" value="employee">
+            <label class="usern" for="employee">Employee</label><br>
+            {% else %}
+            <input type="radio" name="type" id="salon" value="salon">
+            <label class="usern" for="salon">Salon</label><br>
+            <input type="radio" name="type" id="owner" value="owner">
+            <label class="usern" for="owner">Owner</label><br>
+            <input type="radio" name="type" id="employee" value="employee">
+            <label class="usern" for="employee">Employee</label><br>
+         
+            {% endif %}
+        
+        
+       
+        
+        <button class="btn btn-lg n_btn btn-block" type="submit">Login</button>
+
+        <a href="/owner_sign_up/" class="btn btn-lg n_btn btn-block">Signup</a>
+  
+        </form>
+    </div>
+</div>
+</div>
+{{s}}
+
+{% endblock body %}
+
+

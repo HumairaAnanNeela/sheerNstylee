@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<link rel="stylesheet" href="{{url_for('static', filename='salon_list.css')}}">
+<style>
+    td,th  {
+        border: 3px solid rgb(174, 96, 203);
+         border-collapse: collapse;
+         
+    }
+    table{
+        color: white;
+        border: 12px solid rgb(181, 152, 192);
+        padding: 30px;
+        display:inline-block;
+        box-shadow: 5px 10px rgb(241, 246, 247);
+        border-radius: 25px;
+        margin-bottom: 20px;
+    }
+</style>
+
+<div class="row">
+<div class="col-lg-6" id="salon_btn"><button class="n_btn" ><a id="salon_btn" href="/salon_sign_up/">Add Salon</a></button></div>
+</div>
+<div class="row">
+<div class="col-lg-6">
+
+<table class="salon_t">
+    <tr>
+        <th id="salon_th">Shop Name    </th>
+        <th id="salon_th">Shop Type</th>
+        <th id="salon_th">Shop Login</th>
+        <th id="salon_th">Shop Delete</th>
+    </tr>
+    {% for salon in salons %}
+        <tr>
+            <td>{{salon.shop_name}}</td>
+            <td>{{salon.type_of_shop}}</td>
+            <td> <button class="n_btn"><a id="salon_bt" href="/salon_login/">Login</a></button></td>
+            <td> <button class="n_btn"><a id="salon_bt" href="/delete/{{salon.id}}/salon/">Delete</a></button></td>
+        </tr>
+    {% else %}
+        <h1 style="color: white;">There is no salon <strong>Added</strong> or <strong>Created </strong>of this owner</h1>
+    {% endfor %}
+</table>
+</div>
+</div>
+
+{% endblock body %}

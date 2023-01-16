@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<link rel="stylesheet" href="{{url_for('.static', filename='service.css')}}">
+
+<div class="row">
+    <div class="col-lg-6 serviceform">
+        <form action="/service" class="form" method="post">
+            {{form.hidden_tag()}}
+            {{form.service_name.label(class="usern")}}
+            {{form.service_name(class="uname",placeholder="Service Name")}}
+            {{form.about.label(class="usern")}}
+            {{form.about(class="uname",placeholder="About Service")}}
+            {{form.price.label(class="usern")}}
+            {{form.price(class="uname",placeholder="Price of Service")}}
+            {{form.roles.label(class="usern")}}
+            {{form.roles(class="uname",placeholder="Role")}}
+            {{form.name.label(class="usern")}}
+            {{form.name(class="uname",placeholder="Employee Name")}}<br>
+            {{form.submit(class=("btn n_btn"))}}
+        </form>
+    </div>
+</div>
+{% endblock body %}

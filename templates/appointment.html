@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+<link rel="stylesheet" href="{{url_for('static', filename='apptt.css')}}">
+
+    <span class="app">Salon Name: <span class="appt">{{salon_name}}</span><br></span>
+    <span class="app">Customer Name:  <span class="appt">{{customer_name}}</span><br></span>
+    <span class="app">Taken Services:<br>
+    {% for i in range(services|length) %}
+        <span class="appt"><span class="apptt">Service {{i+1}}:   </span>{{services[i].name}}<br></span>
+    {% else %}</span>
+        
+    {% endfor %}
+    Assign Employees: <br>
+    {% for i in range(employees|length) %}
+        <span class="appt"><span class="apptt">employee {{i+1}}:   </span>{{employees[i].name}}<br></span></span>
+    {% else %}
+    
+    {% endfor %}
+    <span class="app">Total Price: <span class="appt">{{totalPrice}} TAKA<br></span></span>
+    <span class="app">Issued By: {{employee_name}}<br></span>
+    <button class="n_btn" type="submit" onclick="printer()">Print</button>
+    <script>
+        function printer() {  
+           print(document)
+        }
+    </script>
+{% endblock body %}
+

@@ -1,0 +1,217 @@
+/*Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) { 
+	
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) and (max-width: 767.98px) { 
+	 .editor {
+		margin-top: 50px;
+		text-align: center;
+	}
+	.banner_h1 {
+		font-size: 45px;
+		text-align: center;
+	}
+	.banner_p {
+		text-align: center;
+	}
+	.b_btn {
+        width: 150px;
+        height: 45px;
+        margin-left: 65px;
+	}
+	.feature {
+		margin-bottom: 50px;
+	}
+	.f_ul {
+		margin-top: 30px;
+		margin-bottom: 50px;
+	}
+	.f_ul li:last-child {
+		margin-top: 35px !important;
+	}
+	.f_img_size {
+		max-height: 400px;
+		margin-left: 80px;
+	}
+	.f_h1 {
+		font-size: 45px;
+		margin-top: 10px;
+		text-align: center;
+	}
+	.ftr_p {
+	    text-align: center;
+    }
+    .jackpot h1 {
+    	font-size: 45px;
+    	text-align: center;
+    }
+    .j_p {
+    	margin: 20px 0;
+    	text-align: center;
+    }
+    .j_border {
+		border-right: none;
+	}
+	.j_single {
+		margin: 5px 20px;
+		padding: 5px 20px;
+	}
+	.jr1 {
+		margin-bottom: 50px;
+	}
+	.l_single h1 {
+		font-size: 45px;
+		text-align: center;
+	}
+	.l_single p {
+		margin: 20px 0;
+		text-align: center;
+	}
+	.latest {
+		margin-bottom: 60px;
+	}
+	.choose {
+		margin-bottom: 50px;
+	}
+	.ultimate h1 {
+		/*font-size: 45px;*/
+		text-align: center;
+	}
+	.u_p {
+		margin: 10px 0;
+		text-align: center; 
+	}
+	.ut_single {
+		margin: 20px 0;
+	}
+	.ulti_img {
+		max-width: 350px;
+	}
+	.l_btn{
+		margin-left: 100px;
+	}
+	.trial_p {
+		margin: 0 26px;
+	}
+	.a_btn {
+		margin: 20px 12px;
+	}
+	.awesome {
+		margin-bottom: 50px;
+	}
+	.client h1 {
+		font-size: 45px;
+		text-align: center;
+	}
+	.client p {
+		text-align: center;
+	}
+	.client h2 {
+		text-align: center;
+	}
+	.star {
+		padding: 0 200px;
+	}
+	h1 {
+		font-size: 45px;
+		text-align: center;
+	}
+	.download p{
+		text-align: center;
+	}
+	.play_img {
+    	margin: 30px 20px 20px 50px;
+	}
+	.ctrl {
+	    width: 100%;
+	    margin-left: 200px;
+	}
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 991.98px) { 
+	.editor {
+		margin-top: 50px;
+	}
+
+	.f_ul li:last-child {
+		margin-top: 35px !important;
+	}
+	.f_img_size {
+		max-height: 600px;
+	}
+	.jackpot h1 {
+		text-align: center;
+	}
+	.j_p {
+		margin-top: 40px;
+		text-align: center;
+		width: 100%;
+	}
+	.j_border {
+		border-right: none;
+	}
+	
+	.jackpot_tm {
+		margin-top: -70px;
+	}
+
+	.card_left {
+	     width: 100%; 
+	     margin-left: 0px; 
+	}
+	.card_right {
+    	 width: 100%; 
+	     margin-left: 0px; 
+	}
+	.ultimate h1 {
+		text-align: center;
+
+	}
+	.u_p {
+		text-align: center;
+	}
+	.ulti_img {
+		width: 450px;
+	}
+	.cl_img {
+		margin-bottom: 50px;
+	}
+	.client h1 {
+		font-size: 45px;
+		text-align: center;
+	}
+	.cl_p {
+		text-align: center;
+	}
+	.download h1 {
+		font-size: 48px;
+	}
+	.play_img {
+    	margin: 15px 0px;
+	}
+	.store_img {
+    	margin: 10px 0;
+	}
+	.final_h1 {
+		margin: 15px 0;
+	}
+
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+	
+}
+
+/*Extra Large devices (large desktops, 992px and up)*/
+@media (min-width: 1200px) and (max-width: 1399.98px) { 
+	
+}
+
+/*Extra large devices (extra large desktops, 1200px and up)*/
+@media (min-width: 1400px) {
+	
+}

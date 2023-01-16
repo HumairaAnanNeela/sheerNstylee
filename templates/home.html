@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<link rel="stylesheet" href="{{url_for('static', filename='home.css')}}">
+
+
+
+<div class="row">
+    <div class="col-lg-6">
+        {{session['salon']}}
+        {% if salon!='' %}
+
+        <h2>Shop Name:</h2><span class="homespan h_clr">{{salon['shop_name']}}</span><br>
+        <h2>Type:</h2><span class="homespan h_clr">{{salon['type_of_shop']}}</span><br>
+        <h2>Eamil:</h2><span class="homespan h_clr">{{salon['email']}}</span><br>
+        <h2>Location:</h2><span class="homespan h_clr">{{salon['location']}}</span><br>
+        <h2>Phone Number:</h2><span class="homespan h_clr">{{salon['phone_number']}}</span>
+        {% endif %}
+    </div>
+   
+</div>
+
+{% if services!='' %}
+<br><br><h2>Service List:</h2>
+<style>
+    td,th  {
+        border: 3px solid rgb(174, 96, 203);
+         border-collapse: collapse;
+         
+    }
+    table{
+        color: white;
+        border: 12px solid rgb(181, 152, 192);
+        padding: 30px;
+        display:inline-block;
+        box-shadow: 5px 10px rgb(241, 246, 247);
+        border-radius: 25px;
+        margin-bottom: 20px;
+    }
+</style>
+<table >
+    <!-- <th class="home_th">Services List</th> -->
+    <tr>
+        <th>Name</th>
+        <th>About</th>
+        <th>Price</th>
+        <th>Update</th>
+        <th>Remove</th>
+    </tr>
+    {% for i in services %}
+    <tr>
+        <td >{{i.name}} </td>
+        <td >{{i.about}} </td>
+        <td ">{{i.price}} </td>
+        <td><Button class="h_btn"><a id="salon_bt" href="#">Edit</a></Button></td>
+        <td><Button class="h_btn"><a id="salon_bt" href="/delete/{{i.id}}/service/">Delete</a></Button></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endif %}
+{% if roles == 1 or roles == 2 %}
+<div class="row">
+<div class="col-lg-3" style="display: inline-block;"><a class="btn n_btn" href="/create_service/">Create service</a></div><br><br>
+<div class="col-lg-3" style="display: inline-block;"><a class="btn n_btn" href="/add_employee/">Add Employee</a></div><br><br>
+<div class="col-lg-3" style="display: inline-block;"><a class="btn n_btn" href="/create_appointment/">Create Appointment</a></div><br><br>
+{% elif roles == 3 %}
+<div style="display: inline-block;"><a class="btn n_btn" href="/create_appointment/">Create Appointment</a></div><br><br>
+{% endif %}
+{% if 'salon_id' in session %}
+<div class="col-lg-3" style="display: inline-block;"><a class="btn n_btn" href="/salon_logout/">Logout Salon</a></div><br><br>
+</div>
+{% endif %}
+{% if 'owner_id' in session %}
+{% else %}
+{% if 'employee_id' in session %}
+<div><a class="btn n_btn" href="/logout_employee/">Logout Employee</a></div><br><br>
+{% else %}
+<div><a class="btn n_btn" href="/login_employee/">Login Employee</a></div><br><br>
+{% endif %}
+{% endif %}
+{% if 'owner_id' in session %}
+<br><br><h2>Employee List:</h2>
+<table >
+    <!-- <th>Employee List</th> -->
+    <tr>
+        <th>Employee Name</th>
+        <th>Gender</th>
+        <th>Email</th>
+        <th>Location</th>
+        <th>Roles</th>
+        <th>Phone Number</th>
+        <th>Update</th>
+        <th>Remove</th>
+    </tr>
+{% for emp in employees %}
+<tr>
+    <td >{{emp.name}} </td>
+    <td >{{emp.gender}} </td>
+    <td >{{emp.email}} </td>
+    <td >{{emp.location}} </td>
+    <td >{{emp.roles}} </td>
+    <td >{{emp.phone_number}} </td>
+    <td><button class="h_btn"><a id="salon_bt" href="">Edit</a></button></td>
+    <td><button class="h_btn"><a id="salon_bt" href="/delete/{{emp.id}}/employee/">Delete</a></button></td>
+    
+</tr>
+    {% else %}
+    <h1 style="color: white;">NO Employee</h1>
+{% endfor %}
+</table>
+{% endif %}
+
+{% endblock body %}

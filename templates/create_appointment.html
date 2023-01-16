@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+<link rel="stylesheet" href="{{url_for('static', filename='appt.css')}}">
+<style>
+    td,th  {
+        border: 3px solid rgb(174, 96, 203);
+         border-collapse: collapse;
+         font-size: 20px;
+         
+    }
+     table{
+        color: white;
+        border: 12px solid rgb(181, 152, 192);
+        padding: 30px;
+        display:inline-block;
+        box-shadow: 5px 10px rgb(241, 246, 247);
+        border-radius: 25px;
+       
+    } 
+</style>
+
+<h1 style="color: white;" align="left">Services</h1>
+<form method="post">
+    <label style="color: white; font-size: 20px;" for="name">Customer name: </label>
+    <input class="inp" type="text" name="name" id="name"><br>
+    <table class="appt_tb">
+        <tr>
+            <th>checkbox</th>
+            <th>Services Name</th>
+            <th>About Services</th>
+            <th>Price</th>
+        </tr>
+      {% for service in services %}
+    
+        <tr>
+            <td > <input type="checkbox" name="service" id="{{service.id}}" value="{{service.id}}"></td>
+            <td >{{service.name}}</td>
+            <td >{{service.about}}</td>
+            <td >{{service.price}}</td>
+        </tr>
+        <br>
+        {% else %}
+        <h1>NO Service</h1>
+        {% endfor %}
+    </table >
+    <h1 style="color: white;" align="left">Employees</h1>
+    <table class="appt_tb">
+        <tr>
+            <th>Checkbox</th>
+           <th>Employee Name</th>
+            <th>Employee Roles</th>
+            
+        </tr>
+        {% for emp in employees %}
+        <tr>
+            <td><input type="checkbox" name="emp" id="{{emp.id}}" value="{{emp.id}}"></td>
+            <td style="color: white; font-size: 20px;">{{emp.name}}:</td>
+            <td style="color: white; font-size: 20px;">{{emp.roles}}</td>
+        </tr>
+        {% else %}
+        <h1>NO Employee</h1>
+        {% endfor %}
+    </table>
+    {% if (employees|length)>0 and (services|length)>0 %}
+    <br><br>
+    <button class="n_btn" type="submit">SUBMIT</button>
+    {% else %}
+    <h1>Appointment Not Possible</h1>
+    
+        
+    {% endif %}
+    
+</form>
+{% endblock body %}
